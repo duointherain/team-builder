@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Teammember from "./Teammember";
+import FriendForm from "./FriendForm";
+import axios from "../axios";
 
 function App() {
   return (
@@ -12,11 +15,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="www.duointherain.com"
           target="_blank"
-          rel="noopener noreferrer"
+          
         >
-          Learn React
+          Visit my site!
         </a>
       </header>
     </div>
