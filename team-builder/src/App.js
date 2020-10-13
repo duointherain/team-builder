@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Teammember from "./Teammember";
-import FriendForm from "./FriendForm";
+import TeamForm from "./TeamForm";
 import axios from "../axios";
 
 function App() {
