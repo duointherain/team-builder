@@ -1,9 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Teammember from "./Teammember";
-import TeamForm from "./TeamForm";
-import axios from "../axios";
+
+const team7 = ["Naruto", "Sasuke", "Sakura"]
 
 function App() {
   return (
@@ -11,16 +10,30 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         We're going to build something today.
         </p>
-        <a
-          className="App-link"
-          href="www.duointherain.com"
-          target="_blank"
-          
-        >
-          Visit my site!
-        </a>
+        <div>
+    
+
+
+    
+  <form>
+    <label>
+    Name: 
+    <input type="text" name="name" />
+    
+  </label>
+  <br></br>
+ 
+  <input type="submit" value="Submit" />
+  
+</form>
+
+<h1>Team Members</h1>
+
+        </div>
+       <p>Team Member: {team7.[0]}</p> 
+        
       </header>
     </div>
   );
