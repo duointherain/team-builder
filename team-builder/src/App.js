@@ -1,10 +1,40 @@
-import React from 'react';
+
+import React, { useState } from "react";
 import logo from './logo.svg';
 import './App.css';
-
+const initialFormValues = { name: "" };
 const team7 = ["Naruto", "Sasuke", "Sakura"]
 
 function App() {
+  const [team, setTeam] = useState(team7);
+  const [formValues, setFormValues] = useState(initialFormValues);
+
+  const updateForm = (inputName, inputValue) => {
+    setFormValues({
+      ...formValues,
+      [inputName]: inputValue,
+    });
+  };
+
+  const onChange = (event)=>{
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value
+    })
+    console.log(formValues)
+
+    const onSubmit = event => {
+      event.preventDefault()
+      
+      axios.post('http://reqres.in/api/users', newPerson)
+      .then (res => {
+        console.log(res)
+      })
+    }
+
+
+  };
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -17,15 +47,15 @@ function App() {
 
 
     
-  <form>
+  <form onSubmit={() => onSubmit}>
     <label>
     Name: 
-    <input type="text" name="name" />
+    <input onChange = {() => onChange} type="text" name="name" />
     
   </label>
   <br></br>
  
-  <input type="submit" value="Submit" />
+  <input  type="submit" value="Submit" />
   
 </form>
 
